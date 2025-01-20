@@ -33,7 +33,7 @@ export default function Header() {
         </a>
       </div>
       <form
-        className={`gap-4 flex-grow justify-center align-middle ml-4 ${
+        className={`flex items-center gap-4 flex-grow justify-center ml-4 ${
           fullState ? "flex" : "hidden md:flex"
         }`}
       >
@@ -53,7 +53,7 @@ export default function Header() {
           <input
             type="search"
             placeholder="Search"
-            className="rounded-l-full border border-secondary-border shadow-inner shadow-secondary py-1 px-4 text-lg w-full focus:border-blue-500 outline-none"
+            className="rounded-l-full border border-secondary-border shadow-inner shadow-secondary py-2 px-4 text-lg w-full focus:border-blue-500 outline-none"
           />
           <Button className="py-2 px-4 rounded-r-full border-secondary-border border border-l-0 flex-shrink-0 bg-secondary-default">
             <LuSearch />
