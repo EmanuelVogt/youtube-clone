@@ -1,14 +1,16 @@
 This project is a clone of YouTube using React, Next.js, and Tailwind CSS.
 
-## Getting Started
+![example](public/example.png)
 
-First, install dependecies:
+# Getting Started
+
+### First, install the dependencies:
 
 ```bash
 npm install
 ```
 
-and run dev server:
+### then, run dev server:
 
 ```bash
 npm run dev
