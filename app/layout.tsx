@@ -1,3 +1,4 @@
+import { SidebarProvider } from "./context/SidebarContext";
 import "./globals.css";
 
 export default function RootLayout({
@@ -8,7 +9,9 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body>
+      <SidebarProvider>
         {children}
+      </SidebarProvider>
       </body>
     </html>
   );
