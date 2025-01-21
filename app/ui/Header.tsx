@@ -10,6 +10,7 @@ import { LuMic } from "react-icons/lu";
 import { LuSearch } from "react-icons/lu";
 import { useState } from "react";
 import { LuArrowLeft } from "react-icons/lu";
+import HeaderFirstSection from "../components/HeaderFirstSection";
 
 export default function Header() {
   const [fullState, setFullState] = useState(false);
@@ -20,18 +21,7 @@ export default function Header() {
 
   return (
     <div className="flex justify-between lg:gap-20 pt-2 mb-6 mx-4">
-      <div
-        className={`gap-4 items-center flex-shrink-0 ${
-          fullState ? "hidden lg:flex" : "flex"
-        }`}
-      >
-        <Button size="icon" variant="default">
-          <LuAlignJustify />
-        </Button>
-        <a href="/">
-          <Image src="/images/youtube.png" width={48} height={48} alt="logo" />
-        </a>
-      </div>
+      <HeaderFirstSection hidden={fullState} />
       <form
         className={`flex items-center gap-4 flex-grow justify-center ml-4 ${
           fullState ? "flex" : "hidden md:flex"
@@ -68,7 +58,11 @@ export default function Header() {
           <LuMic />
         </Button>
       </form>
-      <div className={`flex-shrink-0 md:gap ${fullState ? "hidden lg:flex" : "flex"}`}>
+      <div
+        className={`flex-shrink-0 md:gap ${
+          fullState ? "hidden lg:flex" : "flex"
+        }`}
+      >
         <Button
           size="icon"
           variant="default"
