@@ -2,8 +2,9 @@
 
 import Header from "./ui/Header";
 import Categories from "./ui/Categories";
-import { categories } from "./fake-data";
+import { categories, videos } from "./fake-data";
 import { useState } from "react";
+import VideoItem from "./ui/VideoItem";
 
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
@@ -24,6 +25,11 @@ export default function Home() {
               selectedCategory={selectedCategory}
               onSelect={handleSelectCategory}
             />
+          </div>
+          <div className="grid gap-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))]">
+            {videos.map((video) => (
+              <VideoItem key={video.id} {...video} />
+            ))}
           </div>
         </div>
       </div>
